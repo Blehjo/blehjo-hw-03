@@ -11,7 +11,7 @@ var numArr = charNum.split("-");
 var specArr = charSpec.split("-");
 
 //Character bank that will hold the necessary tools when prompted
-var charBank = ""
+var charBank = "";
 
 function userInput() {
   var passLength = prompt("How many characters do you want your password to be?");
@@ -49,15 +49,12 @@ function userInput() {
   return passBank;
 }
 
-
 // WHEN I click the button to generate a password
 // THEN I am presented with a series of prompts for password criteria
 function generatePassword() {
   var passInput = userInput(); 
   console.log(passInput);
 }
-
-
 
 
 
