@@ -2,7 +2,7 @@
 Password generator
 
 URL to password generator
-
+https://blehjo.github.io/blehjo-hw-03/
 
 URL to github repository
 https://github.com/Blehjo/blehjo-hw-03
