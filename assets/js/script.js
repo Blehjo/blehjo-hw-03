@@ -6,7 +6,7 @@ var generateBtn = document.querySelector("#generate");
 var charLow = "a-b-c-d-e-f-g-h-i-j-k-l-m-n-o-p-q-r-s-t-u-v-w-x-y-z";
 var charUp = "A-B-C-D-E-F-G-H-I-J-K-L-M-N-O-P-Q-R-D-T-U-V-W-X-Y-Z"
 var charNum = "0-1-2-3-4-5-6-7-8-9";
-var charSpec = "~-!-@-#-$-%-^-&-*-_-+-=-|-[-:-'-;-?->-<-/-.,";
+var charSpec = "~-!-@-#-$-%-^-&-*-_-+-=-|-[-:-;-?->-<-/-.-,";
 
 //Create arrays so that our charBank can add them to
 var lowerArr = charLow.split("-");
@@ -65,12 +65,12 @@ function getRandom(array) {
   var password = [];
 
   for (i = 0; i < array.passLength; i++) {
-    var randomI = Math.floor(Math.random() * 100);
+    var randomI = Math.floor(Math.random() * array.charBank.length);
     var randomEl = array.charBank[randomI];
     password.push(randomEl)
   }
 
-  return password.join('');
+  return password.join("");
 }
 
 
