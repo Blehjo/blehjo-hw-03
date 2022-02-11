@@ -60,23 +60,32 @@ function userInput() {
     passCharUp: passCharUp,
     passCharNum: passCharNum,
     passCharSpec: passCharSpec,
+    charBank: charBank
   }; 
-  return charBank;
+
+  var newCharBank = getRandom(passBank)
+  console.log(passBank.passLength)
+  console.log(passBank.charBank[0])
+  return newCharBank
 }
-// function Random(array) {
-//   var randomI = Math.floor(Math.random() * passLength.length);
-//   var randomEl = array[randomI];
+function getRandom(array) {
+  var password = [];
+  for (i = 0; i < array.passLength; i++) {
+    var randomI = Math.floor(Math.random() * 100);
+    var randomEl = array.charBank[randomI];
+    password.push(randomEl)
+  }
+  console.log(array.charBank[randomI])
+  console.log(password)
+  return password.join('');
+}
 
-//   return randomEl;
-// }
-
-// Random(charBank);
 
 
 //Returns charBank array.  Contains the available options for a password based on the choices of the user.
 function generatePassword() {
   var passInput = userInput(); 
-  console.log(passInput);
+  return passInput;
 }
 
 // Write password to the #password input
