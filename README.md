@@ -1,5 +1,4 @@
-# blehjo-hw-03
-Password generator
+# Password generator
 
 URL to password generator
 https://blehjo.github.io/blehjo-hw-03/
